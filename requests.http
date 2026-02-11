@@ -1,0 +1,30 @@
+@baseUrl = http://127.0.0.1:8000/api
+@contentType = application/json
+@id = 1
+
+### List users
+GET {{baseUrl}}/users
+
+### Create user
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+{
+  "name": "kyle",
+  "email": "kael@123.com",
+  "password": "password123"
+}
+
+### Show user
+GET {{baseUrl}}/users/{{id}}
+
+### Update user
+PUT {{baseUrl}}/users/{{id}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Updated Name"
+}
+
+### Delete user
+DELETE {{baseUrl}}/users/{{id}}
